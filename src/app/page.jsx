@@ -125,7 +125,7 @@ function landingpage() {
   ];
   return (
     <div className="  m-0 p-0 h-full w-full ">
-      <div className="w-screen h-100 inset-0 bg-radial [at_25%_25%] from-purple-400 to-cyan-200 animate-gradientX flex  items-center justify-center">
+      <div className="w-screen h-100 inset-0 bg-radial [at_25%_25%] from-purple-400 to-cyan-200 animate-gradientX flex  items-center justify-center ">
         <div className="flex flex-col justify-center items-center h-50 w-100 rounded-2xl bg-box">
           <h1 className="text-2xl font-bold text-white">
             NEW E-COMMERCE IN TOWN
