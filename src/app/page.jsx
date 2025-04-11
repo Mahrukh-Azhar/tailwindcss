@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 function landingpage() {
   const data = [
@@ -125,47 +124,34 @@ function landingpage() {
     },
   ];
   return (
-    <div className="bg-gradient-to-r from-purple-900 to-black animate-gradient p-4  w-full top-0 left-0 z-50 h-40 ">
-      <div className=" mt-30 flex items-center ">
-        <h3 className="text-white text-5xl my-8">
-          MAKE YOUR SOFTWARE VISION A REALITY
-        </h3>
-      </div>
-      <div className="">
-        <span className="text-white text-4xl mr-3">Pro tools created with</span>
-        <span className="text-one text-4xl underline underline-offset-8">
-          {"{developers}"}
-        </span>
-        <span className="text-white text-4xl">,</span>
-        <div className="my-2">
-          <span className="text-two text-4xl underline underline-offset-8">
-            Teams
-          </span>
-          <span className="text-white text-4xl">, and </span>
-          <span className="text-three text-4xl underline underline-offset-8">
-            Businesses
-          </span>
-          <span className="text-white text-4xl"> in mind. </span>
+    <div className="  m-0 p-0 h-full w-full ">
+      <div className="w-screen h-100 inset-0 bg-radial [at_25%_25%] from-purple-400 to-cyan-200 animate-gradientX flex  items-center justify-center">
+        <div className="flex flex-col justify-center items-center h-50 w-100 rounded-2xl bg-box">
+          <h1 className="text-2xl font-bold text-white">
+            NEW E-COMMERCE IN TOWN
+          </h1>
+          <h3 className="text-2xl text-pink-300">Explore Latest Collection</h3>
         </div>
       </div>
-      <div className="grid grid-cols-1 my-6">
-        <h3 className="text-white text-4xl grid place-content-center">
-          DATA TO SHOWCASE
-        </h3>
-        {data.map((data) => (
-          <div key={data.id} className=" my-1.5">
-            <img
-              src={decodeURIComponent(data.image)}
-              width={100}
-              height={100}
-            />
-            <h1 className="text-white">{data.id}</h1>
-            <h3 className="text-two">{data.title}</h3>
-            <p className="text-white">{data.description}</p>
-            <p className="text-three">Price :{data.price}</p>
-            <p className="text-white"> Rating :{data.rating}</p>
-          </div>
-        ))}
+      <div className="bg-pink-100">
+        <div key={data.id} className="grid grid-cols-3">
+          {data.map((data) => (
+            <div className="h-70 bg-white  w-90 m-10 flex flex-row ">
+              <img
+                src={data.image}
+                height={100}
+                width={100}
+                className="object-contain"
+              />
+              <div className="flex flex-col m-2 ">
+                <p className="text-box font-bold my-3">{data.title}</p>
+                <p>{data.description}</p>
+                <p className="font-semibold my-1">Price: {data.price}</p>
+                <p className="text-amber-700">Rating: {data.rating}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
